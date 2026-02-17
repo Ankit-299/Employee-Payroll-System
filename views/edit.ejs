@@ -6,10 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="POST" action="/post">
-        <h3>Employee Name: <input placeholder="Employee Name" name="username"></h3>
-        <h3>Basic Salary : <input placeholder="Basic Salary" name="basicSalary"></h3>
-        <button>Add</button>
+    <h1>Welcome <%=username%></h1>
+    <form method="POST" action="/edit/post/<%=id%>?_method=PATCH">
+        <h3>Edit Username: <input placeholder="Enter new username"  name="username"></h3>
+        <h3>Edit BasicSalary: <input placeholder="Enter new Salary" name="basicSalary"></h3>
+        <h3>Edit Gender: <input placeholder="Enter Gender" name="gender"></h3>
+        <h3>Edit Department: <input placeholder="Enter Department" name="department"></h3>
+        <button>Submit</button>
     </form>
     
 </body>

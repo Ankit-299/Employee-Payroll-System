@@ -1,12 +1,18 @@
 [
     {
+        "id": 1708065438123,
         "username":"Shashank Shekhar",
-        "basicSalary":23000
+        "basicSalary":23000,
+        "gender":"Male",
+        "department":"Sales"
 
     },
     
     {   
+        "id":1708065499321,
         "username":"HarshitMaheshwari",
-        "basicSalary":30000
+        "basicSalary":30000,
+        "gender":"Male",
+        "department":"HR"
     }
 ]

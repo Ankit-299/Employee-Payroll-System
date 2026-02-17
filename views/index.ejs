@@ -13,6 +13,12 @@
         <h3>Basic Salary: <%= employee.basicSalary %></h3>
         <h3>Tax: <%=employee.basicSalary*0.12 %></h3>
         <h2>Net Salary: <%= employee.basicSalary - employee.basicSalary*0.12 %></h2>
+        <h3>Gender: <%= employee.gender %></h3>
+        <h2>Department: <%= employee.department %></h2>
+        <h3>Date: <%= new Date(employee.id).toLocaleDateString() %></h3>
+
+        <form method="POST" action="/edit/<%=employee.id%>/<%=employee.username%>"><button>Edit</button></form>
+        <form method="POST" action="/delete/<%=employee.id%>?_method=DELETE"><button>Delete</button></form>
 
         <br><hr>
     <%}%>

@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <h1>Employee Details</h1>
-    <br><hr>
-    <% for(employee of employees){ %>
-        <h3>Employee Name: <%= employee.username %></h3>
-        <h3>Basic Salary: <%= employee.basicSalary %></h3>
-        <h3>Tax: <%=employee.basicSalary*0.12 %></h3>
-        <h2>Net Salary: <%= employee.basicSalary - employee.basicSalary*0.12 %></h2>
 
-        <br><hr>
-    <%}%>
-    <form method="GET" action="/add">
-        <button>Add User</button>
-    </form>
+<div class="top-bar">
+<h2>Employee Details</h2>
+<a class="add-btn" href="/add">+ Add User</a>
+</div>
+
+<table class="payroll-table">
+<tr>
+<th>Name</th>
+<th>Department</th>
+<th>Salary</th>
+<th>Tax (12%)</th>
+<th>Net Salary</th>
+<th>Action</th>
+</tr>
+
+<% employees.forEach(e=>{ 
+  const tax = e.salary*0.12;
+  const net = e.salary-tax;
+%>
+<tr>
+<td><%=e.name%></td>
+<td><span class="badge"><%=e.department%></span></td>
+<td>₹ <%=e.salary%></td>
+<td>₹ <%=tax.toFixed(2)%></td>
+<td>₹ <%=net.toFixed(2)%></td>
+<td>
+<a href="/edit/<%=e.id%>">✏</a>
+<a href="/delete/<%=e.id%>">🗑</a>
+</td>
+</tr>
+<%})%>
+
+</table>
 
 </body>
-
 </html>

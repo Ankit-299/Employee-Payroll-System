@@ -1,19 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<meta charset="UTF-8">
+
+<title>Edit Employee</title>
+
+<link rel="stylesheet" href="/style.css">
+
 </head>
+
 <body>
-    <h1>Welcome <%=username%></h1>
-    <form method="POST" action="/edit/post/<%=id%>?_method=PATCH">
-        <h3>Edit Username: <input placeholder="Enter new username"  name="username"></h3>
-        <h3>Edit BasicSalary: <input placeholder="Enter new Salary" name="basicSalary"></h3>
-        <h3>Edit Gender: <input placeholder="Enter Gender" name="gender"></h3>
-        <h3>Edit Department: <input placeholder="Enter Department" name="department"></h3>
-        <button>Submit</button>
-    </form>
-    
+
+<div class="topbar">
+
+<div class="logo">
+
+<span class="logo-green">EMPLOYEE</span>
+
+<span class="logo-dark">PAYROLL</span>
+
+</div>
+
+</div>
+
+
+<div class="form-wrapper">
+
+<div class="form-card">
+
+<h2>Edit Employee</h2>
+
+
+<form method="POST" action="/edit/post/<%= id %>?_method=PATCH">
+
+
+<div class="form-row">
+
+<label>Name</label>
+
+<input type="text" name="username" required>
+
+</div>
+
+
+<div class="form-row">
+
+<label>Salary</label>
+
+<input type="text" name="basicSalary" required>
+
+</div>
+
+
+<div class="form-row">
+
+<label>Gender</label>
+
+<input type="text" name="gender" required>
+
+</div>
+
+
+<div class="form-row">
+
+<label>Department</label>
+
+<input type="text" name="department" required>
+
+</div>
+
+
+<div class="form-buttons">
+
+<button type="submit" class="submit">
+
+Update
+
+</button>
+
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
 </body>
+
 </html>

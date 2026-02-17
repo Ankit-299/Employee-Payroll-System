@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <br><hr>
+    <% for(employee of employees){ %>
+        <h3>Employee Name: <%= employee.username %></h3>
+        <h3>Basic Salary: <%= employee.basicSalary %></h3>
+        <h3>Tax: <%=employee.basicSalary*0.12 %></h3>
+        <h2>Net Salary: <%= employee.basicSalary - employee.basicSalary*0.12 %></h2>
+
+        <br><hr>
+    <%}%>
+    <form method="GET" action="/add">
+        <button>Add User</button>
+    </form>
+
+</body>
+
+</html>

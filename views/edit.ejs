@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Edit Employee</title>
+
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Edit Employee</h1>
+
+<form method="POST" action="/edit/<%= employee.id %>">
+
+<label>Employee Name</label>
+
+<input 
+name="username" 
+value="<%= employee.username %>" 
+required
+>
+
+<label>Basic Salary</label>
+
+<input 
+name="basicSalary" 
+value="<%= employee.basicSalary %>" 
+required
+>
+
+<button>Update</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>

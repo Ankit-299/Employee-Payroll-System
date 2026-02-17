@@ -1,69 +1,269 @@
 body{
-font-family: Arial, sans-serif;
-background:#f4f6f8;
+
 margin:0;
-padding:20px;
+font-family:Segoe UI, sans-serif;
+background:#f7f7f7;
 }
+
+/* Top bar */
+
+.topbar{
+background:#ffffff;
+padding:15px 30px;
+box-shadow:0 2px 4px rgba(0,0,0,0.1);
+font-weight:bold;
+color:#82b61b;
+}
+
+
+/* Container */
 
 .container{
+
 width:80%;
-margin:auto;
+
+margin:30px auto;
+
+background:white;
+
+padding:20px;
+
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+
 }
 
-h1{
-text-align:center;
-margin-bottom:20px;
-}
+
+/* Add button */
 
 .add-btn{
-display:inline-block;
-margin-bottom:10px;
-padding:8px;
-background:green;
+
+background:#82b61b;
+
 color:white;
+
+padding:8px 15px;
+
 text-decoration:none;
+
+border-radius:4px;
+
+float:right;
+
 }
+
+
+/* Table */
 
 table{
+
 width:100%;
+
 border-collapse:collapse;
-background:white;
+
+margin-top:20px;
+
 }
 
-th,td{
-padding:10px;
-border:1px solid #ccc;
-text-align:center;
-}
 
-.edit{
-background:blue;
+th{
+
+background:#42515f;
+
 color:white;
-padding:5px;
-text-decoration:none;
+
+padding:12px;
+
+text-align:left;
+
 }
 
-.delete{
-background:red;
+
+td{
+
+padding:12px;
+
+border-bottom:1px solid #ddd;
+
+}
+
+
+/* Avatar image FIX */
+
+.avatar{
+
+width:40px;     /* IMPORTANT FIX */
+
+height:40px;
+
+border-radius:50%;
+
+vertical-align:middle;
+
+margin-right:10px;
+
+}
+
+
+/* Delete button */
+
+.delete-btn{
+
+background:#e74c3c;
+
 color:white;
-padding:5px;
-text-decoration:none;
-}
 
-form{
-background:white;
-padding:20px;
-}
-
-input{
-width:100%;
-padding:8px;
-margin:10px 0;
-}
-
-button{
-background:green;
-color:white;
-padding:10px;
 border:none;
+
+padding:5px 10px;
+
+border-radius:4px;
+
+cursor:pointer;
+
+}
+/* FIX FORM ALIGNMENT */
+
+.form-row{
+
+display:flex;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+
+.form-row label{
+
+width:150px;
+
+font-size:15px;
+
+color:#555;
+
+}
+
+
+.form-row input[type="text"]{
+
+width:400px;
+
+padding:10px;
+
+border:1px solid #ccc;
+
+border-radius:4px;
+
+}
+
+
+.form-row textarea{
+
+width:400px;
+
+height:80px;
+
+}
+
+
+.profile-group{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+
+.profile-option{
+
+display:flex;
+
+align-items:center;
+
+gap:5px;
+
+}
+
+
+.profile-option img{
+
+width:40px;
+
+height:40px;
+
+border-radius:50%;
+
+}
+
+
+.gender-group,
+
+.dept-group{
+
+display:flex;
+
+gap:20px;
+
+}
+/* PERFECT XD GRID */
+
+.form-card{
+
+width:700px;
+
+}
+
+
+.form-row{
+
+display:grid;
+
+grid-template-columns:150px 1fr;
+
+align-items:center;
+
+margin-bottom:20px;
+
+}
+
+
+.gender-group,
+
+.dept-group,
+
+.profile-group{
+
+display:flex;
+
+gap:20px;
+
+}
+
+
+select{
+
+width:200px;
+
+}
+
+
+.date-group{
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+.date-group select{
+
+width:120px;
+
+
+
 }

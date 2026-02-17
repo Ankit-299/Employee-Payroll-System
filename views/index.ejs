@@ -1,24 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Employee Details</h1>
-    <br><hr>
-    <% for(employee of employees){ %>
-        <h3>Employee Name: <%= employee.username %></h3>
-        <h3>Basic Salary: <%= employee.basicSalary %></h3>
-        <h3>Tax: <%=employee.basicSalary*0.12 %></h3>
-        <h2>Net Salary: <%= employee.basicSalary - employee.basicSalary*0.12 %></h2>
+<html>
 
-        <br><hr>
-    <%}%>
-    <form method="GET" action="/add">
-        <button>Add User</button>
-    </form>
+<head>
+
+<title>Employee Payroll</title>
+
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+
+<div class="topbar">
+
+EMPLOYEE PAYROLL
+
+</div>
+
+
+
+<div class="container">
+
+
+<h2>Employee Details</h2>
+
+
+<a href="/add" class="add-btn">
+
++ Add User
+
+</a>
+
+
+
+<table>
+
+
+<tr>
+
+<th>Name</th>
+
+<th>Gender</th>
+
+<th>Department</th>
+
+<th>Salary</th>
+
+<th>Start Date</th>
+
+<th>Actions</th>
+
+</tr>
+
+
+
+<% employees.forEach(function(emp){ %>
+
+
+<tr>
+
+
+<td>
+
+<img src="/assets/profile.png" class="avatar">
+
+<%= emp.username %>
+
+</td>
+
+
+<td>
+
+<%= emp.gender || "Male" %>
+
+</td>
+
+
+<td>
+
+HR Sales
+
+</td>
+
+
+<td>
+
+₹ <%= emp.basicSalary %>
+
+</td>
+
+
+<td>
+
+<%= new Date(emp.id).toLocaleDateString() %>
+
+</td>
+
+
+<td>
+
+<form action="/delete/<%= emp.id %>?_method=DELETE" method="POST">
+
+<button class="delete-btn">
+
+Delete
+
+</button>
+
+</form>
+
+</td>
+
+
+</tr>
+
+
+<% }) %>
+
+
+</table>
+
+
+</div>
+
 
 </body>
 

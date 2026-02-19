@@ -65,15 +65,22 @@ margin-top:20px;
 }
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 82f4457e571d85d2e5515bce058c3ab91f123758
 th{
 
 background:#42515f;
 
 color:white;
 
+<<<<<<< HEAD
 padding:15px;
+=======
+padding:12px;
+>>>>>>> 82f4457e571d85d2e5515bce058c3ab91f123758
 
 text-align:left;
 
@@ -87,6 +94,7 @@ padding:12px;
 border-bottom:1px solid #ddd;
 
 }
+<<<<<<< HEAD
  /* thead tr {
     
     color: white;
@@ -101,6 +109,8 @@ th, td {
     padding: 15px;
     text-align: left;
 } */
+=======
+>>>>>>> 82f4457e571d85d2e5515bce058c3ab91f123758
 
 
 /* Avatar image FIX */

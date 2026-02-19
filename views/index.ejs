@@ -2,12 +2,21 @@
 <html>
 
 <head>
+<<<<<<< HEAD
     <title>Employee Payroll</title>
     <link rel="stylesheet" href="/style.css">
+=======
+
+<title>Employee Payroll</title>
+
+<link rel="stylesheet" href="/style.css">
+
+>>>>>>> 82f4457e571d85d2e5515bce058c3ab91f123758
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <div class="topbar">
         EMPLOYEE PAYROLL
     </div>
@@ -19,6 +28,115 @@
         <a href="/add" class="add-btn">
             + Add User
         </a>
+=======
+
+<div class="topbar">
+
+EMPLOYEE PAYROLL
+
+</div>
+
+
+
+<div class="container">
+
+
+<h2>Employee Details</h2>
+
+
+<a href="/add" class="add-btn">
+
++ Add User
+
+</a>
+
+
+
+<table>
+
+
+<tr>
+
+<th>Name</th>
+
+<th>Gender</th>
+
+<th>Department</th>
+
+<th>Salary</th>
+
+<th>Start Date</th>
+
+<th>Actions</th>
+
+</tr>
+
+
+
+<% employees.forEach(function(emp){ %>
+
+
+<tr>
+
+
+<td>
+
+<img src="/assets/profile.png" class="avatar">
+
+<%= emp.username %>
+
+</td>
+
+
+<td>
+
+<%= emp.gender || "Male" %>
+
+</td>
+
+
+<td>
+
+HR Sales
+
+</td>
+
+
+<td>
+
+₹ <%= emp.basicSalary %>
+
+</td>
+
+
+<td>
+
+<%= new Date(emp.id).toLocaleDateString() %>
+
+</td>
+
+
+<td>
+
+<form action="/delete/<%= emp.id %>?_method=DELETE" method="POST">
+
+<button class="delete-btn">
+
+Delete
+
+</button>
+
+</form>
+
+</td>
+
+
+</tr>
+
+
+<% }) %>
+
+>>>>>>> 82f4457e571d85d2e5515bce058c3ab91f123758
 
         <table>
             <thead>
@@ -164,8 +282,13 @@
 
     </div>
 
+
+</div>
+
+
 </body>
 
+<<<<<<< HEAD
 </html>
 
 
@@ -177,4 +300,6 @@
 
 </body>
 
+=======
+>>>>>>> 82f4457e571d85d2e5515bce058c3ab91f123758
 </html>

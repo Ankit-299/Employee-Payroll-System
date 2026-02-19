@@ -27,8 +27,9 @@ app.get("/add",(req,res)=>{
 
 app.post("/post", (req,res)=>{
     const {username , basicSalary , gender , department}= req.body;
+   
     const id = Date.now();
-    //console.log(username,basicSalary,gender);
+    
     employees.push({
         id:id,
         username:username,
@@ -70,6 +71,7 @@ app.delete("/delete/:id",(req,res)=>{
     employees=employees.filter((p)=> p.id !== Number(id) );
     res.redirect("/");
 })
+
 
 
 
